@@ -9,7 +9,7 @@ def calculator():
         try:
             # printed the choices that my user has
             print("""
-Please select one of the following options:
+Please select one of the following  options:
 view = would you like to all the equations in the text file
 add  = would you like to add new sum into the text file 
 exit = exist the calculator 
@@ -44,7 +44,7 @@ exit = exist the calculator
 
                     # checked if my file was empty or not
                     # used if and else statement
-                    if os.path.getsize(file_name) == 0:
+                    if os.path.getsize(file_name) > 0:
                         print("The file is currently empty enter some equations first")
 
                     else:
