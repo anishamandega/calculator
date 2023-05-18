@@ -10,32 +10,32 @@ def calculator():
             # printed the choices that my user has
             print("""
 Please select one of the following options:
-view = would you like to all the equations in the text file
-add  = would you like to add new sum into the text file 
-exit = exist the calculator 
+1.view = would you like to all the equations in the text file
+2. add  = would you like to add new sum into the text file 
+3. = exist the calculator 
             """)
             # asked my user to input there choice
             choice = input("Enter here:").lower()
 
             # used a while loop make sure my user enters one of the options
-            while choice not in ("view", "add", "exit"):
+            while choice not in ("1", "2", "3"):
                 print("The choice you have selected is invalid, please try again\n")
 
                 # printed the options my user has
                 print("""
 Please select one of the following options:
-view = would you like to all the equations in the text file
-add  = would you like to add new sum into the text file  
-exit = exist the calculator
+1.view = would you like to all the equations in the text file
+2. add  = would you like to add new sum into the text file 
+3. = exist the calculator 
                             """)
 
                 # asked my user for input
                 choice = input("Enter here:").lower()
 
-            if choice in ("view", "add", "exit"):
+            if choice in ("1", "2", "3"):
 
                 # used if statements
-                if choice == "view":
+                if choice == "1":
 
                     print("You have selected to view the equations\n")
 
@@ -44,7 +44,7 @@ exit = exist the calculator
 
                     # checked if my file was empty or not
                     # used if and else statement
-                    if os.path.getsize(file_name) == 0:
+                    if os.path.getsize(file_name) > 0:
                         print("The file is currently empty enter some equations first")
 
                     else:
@@ -59,7 +59,7 @@ exit = exist the calculator
                         # closed my file
                         file_name.close()
 
-                elif choice == "add":
+                elif choice == "2":
 
                     print("You have selected to add a new equation\n")
 
@@ -70,10 +70,10 @@ exit = exist the calculator
                     # printed the options they have
                     print("""
 Please select one of the following options:
-add      = adding the two numbers
-subtract = subtracting the two numbers 
-multiply = multiplying the two numbers
-divide   = dividing the two numbers
+1. add      = adding the two numbers
+2. subtract = subtracting the two numbers 
+3. multiply = multiplying the two numbers
+4. divide   = dividing the two numbers
                                                         """)
 
                     # asked the user to enter there choice
@@ -85,19 +85,19 @@ divide   = dividing the two numbers
 
                         print("""
 Please select one of the following options:
-add      = adding the two numbers
-subtract = subtracting the two numbers 
-multiply = multiplying the two numbers
-divide   = dividing the two numbers
+1. add      = adding the two numbers
+2. subtract = subtracting the two numbers 
+3. multiply = multiplying the two numbers
+4. divide   = dividing the two numbers
                                 """)
                         calculate = input("Enter here:")
-                    if calculate in ("add", "subtract", "multiply", "divide"):
+                    if calculate in ("1", "2", "3", "4"):
 
                         # opened my sums.txt file and appended to it
                         with open("sums.txt", "a") as files:
 
                             # used if and elif statement
-                            if calculate == "add":
+                            if calculate == "1":
 
                                 # added the two numbers inputted by the user
                                 result = num1 + num2
@@ -108,7 +108,7 @@ divide   = dividing the two numbers
                                 # wrote to my sums.txt file
                                 files.write(f"The addition of {num1} + {num2} is equal to {result}\n")
 
-                            elif calculate == "subtract":
+                            elif calculate == "2":
 
                                 # subtracted the two numbers inputted by the user
                                 result = num1 - num2
@@ -119,7 +119,7 @@ divide   = dividing the two numbers
                                 # wrote to my sums.txt file
                                 files.write(f"The subtraction of {num1} - {num2} is equal to {result}\n")
 
-                            elif calculate == "multiply":
+                            elif calculate == "3":
 
                                 # multiplied the two numbers inputted by the user
                                 result = num1 * num2
@@ -130,7 +130,7 @@ divide   = dividing the two numbers
                                 # wrote to my sums.txt file
                                 files.write(f"The multiplication of {num1} * {num2} is equal to {result}\n")
 
-                            elif calculate == "divide":
+                            elif calculate == "4":
 
                                 # divided the two numbers my user entered
                                 result = num1 / num2
@@ -142,7 +142,7 @@ divide   = dividing the two numbers
                                 files.write(f"The division of {num1}/{num2} is equal to {result}\n")
 
                 # gave my user a choice to exit the program
-                elif choice == "exit":
+                elif choice == "3":
                     print(f"""You have selected to exit the calculator
 Bye!!""")
                     exit()
