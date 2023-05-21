@@ -30,7 +30,7 @@ $ python calculator.py
 ### 3. If you select to view the equatioins you will be asked to give the name of the file which is ***sums.txt*** after that you will be shown all the equations you excutated and there answers but if you haven't done an equations the program will show nothing.
 ### 4.If you select to exit you will exit the program.
 ### Here is of the first menu you see when you enter the program:
-![GitHub Logo](/images/img1.png)
+[GitHub Logo](/images/img1.png)
 
 ### Here is an image of the menu when you select to add an equation:
 ![GitHub Logo](/images/img2.png)
