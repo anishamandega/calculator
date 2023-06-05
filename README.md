@@ -1,6 +1,6 @@
 # Calculator
 
-### The is a calculator program which performs the following  arithmetic operations adding,multiplication,subtraction and division and it also allows you to see the equations you.
+### This is a calculator program which performs the following  arithmetic operations adding,multiplication,subtraction and division and it also allows you to see the equations you.
 
 ## Table of Contents
 ### Installation
